@@ -43,22 +43,16 @@ var rpSoundFxMap = [
  */
 var rpButtonsMap = [
     {
-        "name": "up_button",
+        "name": "moveButton",
         "src": "resources/sprites/up-button-sprite.png",
         "height": 87,
         "width": 300
     },
     {
-        "name": "fs_button",
-        "src": "resources/sprites/fs-button-sprite.png",
+        "name": "fullscreenButton",
+        "src": "resources/sprites/fullscreen_button.png",
         "height": 26,
         "width": 87
-    },
-    {
-        "name": "vol_button",
-        "src": "resources/sprites/volume-sprite.png",
-        "height": 22,
-        "width": 25
     }
 ];
 
@@ -68,31 +62,11 @@ var rpButtonsMap = [
 var rpBackgrounds = [
     {
         "name": "outside_seaside",
-        "src": "resources/scenes/seaside.png"
+        "src": "resources/scenes/outside_seaside.jpg"
     },
     {
         "name": "outside_castle",
-        "src": "resources/scenes/seaside.png"
-    },
-    {
-        "name": "outside_seaside",
-        "src": "resources/scenes/seaside.png"
-    },
-    {
-        "name": "outside_seaside",
-        "src": "resources/scenes/seaside.png"
-    },
-    {
-        "name": "outside_seaside",
-        "src": "resources/scenes/seaside.png"
-    },
-    {
-        "name": "outside_seaside",
-        "src": "resources/scenes/seaside.png"
-    },
-    {
-        "name": "outside_seaside",
-        "src": "resources/scenes/seaside.png"
+        "src": "resources/scenes/outside_castle.jpg"
     }
 ];
 
@@ -100,15 +74,16 @@ var rpBackgrounds = [
  * This mapping is how the buttons are shown.
  * @type {{map_name: {up, right, down, left}}}
  */
-var gameZorkNaviMap = {
+var rpGameMap = {
+    "start": "outside_seaside",
     "outside_seaside": {
-        "up": {
+        "forward": {
             "btn": false
         },
         "right": {
             "btn": false
         },
-        "down": {
+        "back": {
             "btn": true,
             "soundfx": "step_outside",
             "goto": "outside_castle"
@@ -117,10 +92,10 @@ var gameZorkNaviMap = {
             "btn": false
         },
         "music": "outside_seaside",
-        "bg_src": "resources/sprites/seaside.png"
+        "scene": "outside_seaside"
     },
     "outside_castle": {
-        "up": {
+        "forward": {
             "btn": true,
             "soundfx": "step_outside",
             "goto": "outside_castle_near"
@@ -128,7 +103,7 @@ var gameZorkNaviMap = {
         "right": {
             "btn": false
         },
-        "down": {
+        "back": {
             "btn": true,
             "soundfx": "step_outside",
             "goto": "outside_seaside"
@@ -138,63 +113,5 @@ var gameZorkNaviMap = {
         },
         "music": "outside_seaside",
         "bg_src": "outside_castle"
-    },
-    "outside_castle_near": {
-        "up": {
-            "btn": true,
-            "soundfx": "step_outside",
-            "goto": "outside_castle_door"
-        },
-        "right": {
-            "btn": false
-        },
-        "down": {
-            "btn": true,
-            "soundfx": "step_outside",
-            "goto": "outside_castle"
-        },
-        "left": {
-            "btn": false
-        },
-        "music": "outside_eerie",
-        "bg_src": "resources/sprites/castle_near.png"
-    },
-    "outside_castle_door": {
-        "up": {
-            "btn": false
-        },
-        "right": {
-            "btn": true,
-            "soundfx": "step_outside",
-            "goto": "castle_deadend_up"
-        },
-        "down": {
-            "btn": false
-        },
-        "left": {
-            "btn": true,
-            "soundfx": "step_outside",
-            "goto": "outside_castle_near"
-        },
-        "music": "outside_eerie",
-        "bg_src": "resources/sprites/castle_door.png"
-    },
-    "castle_deadend_up": {
-        "up": {
-            "btn": false
-        },
-        "right": {
-            "btn": false
-        },
-        "down": {
-            "btn": false
-        },
-        "left": {
-            "btn": true,
-            "soundfx": "step_outside",
-            "goto": "outside_castle_near"
-        },
-        "music": "outside_eerie",
-        "bg_src": "resources/sprites/castle_deadend_up.png"
     }
 };

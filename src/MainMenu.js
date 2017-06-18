@@ -25,6 +25,7 @@ BasicGame.MainMenu.prototype = {
         this.music.fadeIn(10000);
 
         this.background = this.add.sprite(0, 0, 'backgroundMenu');
+
         var titlePaddingTop = 90;
         this.title = this.add.sprite(this.game.width / 2, titlePaddingTop, 'title');
         this.title.anchor.setTo(0.5, 0);
@@ -45,7 +46,9 @@ BasicGame.MainMenu.prototype = {
             this.game.width / 2,
             this.game.height - playHeight / 2 - playPadding - this.game.paddingBot,
             'play',
-            this.startGame,
+            function () {
+                self.startGame();
+            },
             this,
             0, 1, 1, 1);
         this.playButton.anchor.setTo(0.5, 0.5);
@@ -56,7 +59,7 @@ BasicGame.MainMenu.prototype = {
         });
         this.helpScreen = this.add.button(25, -700, 'openBook', function () {
             self.toggleHelpScreen();
-        }, this);
+        });
     },
 
     update: function () {
