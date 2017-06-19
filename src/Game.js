@@ -184,7 +184,7 @@ BasicGame.Game.prototype = {
         this.rpBackButton.angle = 180;
         this.rpFrontLayer.add(this.rpBackButton);
 
-        this.rpLeftButton = this.game.add.button(this.game.world.centerX - 350, this.game.world.centerY, 'moveButton', function() {
+        this.rpLeftButton = this.game.add.button(this.game.world.centerX - 350, this.game.world.centerY, 'moveButton', function () {
             self.moveLeft()
         }, this, 2, 1, 0);
         this.rpLeftButton.anchor.set(0.5, 0.5);
@@ -205,15 +205,23 @@ BasicGame.Game.prototype = {
         //@todo add some logic here to check the visitedStates and fades the buttons of where they have been
         if (this.rpVisitedStates.hasOwnProperty(rpGameMap[this.rpFutureState].forward.goto)) {
             this.rpForwardButton.alpha = 0.666;
+        } else {
+            this.rpForwardButton.alpha = 1;
         }
         if (this.rpVisitedStates.hasOwnProperty(rpGameMap[this.rpFutureState].left.goto)) {
             this.rpLeftButton.alpha = 0.666;
+        } else {
+            this.rpLeftButton.alpha = 1;
         }
         if (this.rpVisitedStates.hasOwnProperty(rpGameMap[this.rpFutureState].right.goto)) {
             this.rpRightButton.alpha = 0.666;
+        } else {
+            this.rpRightButton.alpha = 1;
         }
         if (this.rpVisitedStates.hasOwnProperty(rpGameMap[this.rpFutureState].back.goto)) {
             this.rpBackButton.alpha = 0.666;
+        } else {
+            this.rpBackButton.alpha = 1;
         }
     },
 
@@ -291,5 +299,4 @@ BasicGame.Game.prototype = {
         this.state.start('MainMenu');
     }
 
-}
-;
+};
