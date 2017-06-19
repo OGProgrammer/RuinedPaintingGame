@@ -6,15 +6,16 @@ BasicGame.DBInc = function (game) {
 BasicGame.DBInc.prototype = {
 
 	create: function () {
-        var background = this.game.add.sprite(0, 0);
-        background.width = 960;
-        background.height = 640;
+        if (this.game.device.desktop) {
+            var background = this.game.add.sprite(0, 0);
+            background.width = 960;
+            background.height = 640;
 
-        this.fireFilter = this.game.add.filter('Fire', 800, 600);
-        this.fireFilter.alpha = 0.0;
+            this.fireFilter = this.game.add.filter('Fire', 800, 600);
+            this.fireFilter.alpha = 0.0;
 
-        background.filters = [this.fireFilter];
-
+            background.filters = [this.fireFilter];
+        }
         var gaSprite = this.add.sprite(this.game.width / 2, this.game.height / 2, 'dbinc');
         gaSprite.anchor.setTo(0.5, 0.5);
         var gaSound = this.add.audio('dbincRpHeartbeat');
@@ -32,8 +33,10 @@ BasicGame.DBInc.prototype = {
 	},
 
 	update: function () {
-	    // Update 🔥
-        this.fireFilter.update();
+        if (this.game.device.desktop) {
+            // Update 🔥
+            this.fireFilter.update();
+        }
 	}
 
 };

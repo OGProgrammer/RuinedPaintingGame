@@ -91,6 +91,27 @@ BasicGame.Game.prototype = {
         this.rpFullscreenButton.anchor.setTo(0.5, 0.5);
         this.rpFrontLayer.add(this.rpFullscreenButton);
 
+        this.rpConsole = this.add.sprite(25, 480, "console");
+        this.rpFrontLayer.add(this.rpConsole);
+
+        var style = {
+            font: '14pt Crimson Text',
+            fill: 'white',
+            align: 'center',
+            wordWrap: true,
+            wordWrapWidth: this.rpConsole.width
+        };
+
+        this.rpTitleText = this.game.add.text(this.rpConsole.width / 2, 15, rpGameMap[this.rpCurrentState].title, style);
+        this.rpTitleText.anchor.set(0.5);
+        this.rpFrontLayer.add(this.rpTitleText);
+        this.rpConsole.addChild(this.rpTitleText);
+
+        this.rpNarratorText = this.game.add.text(this.rpConsole.width / 2, 85, rpGameMap[this.rpCurrentState].narrator, style);
+        this.rpNarratorText.anchor.set(0.5);
+        this.rpFrontLayer.add(this.rpNarratorText);
+        this.rpConsole.addChild(this.rpNarratorText);
+
         this.showQuickInstructions();
 
         // Init Pause Board

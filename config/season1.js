@@ -121,6 +121,8 @@ var rpBackgrounds = [
 var rpGameMap = {
     "start": "outside_seaside",
     "outside_seaside": {
+        "title": "Seaside",
+        "narrator": "Now is my chance to steal the painting while the kingdom celebrates in town...",
         "forward": {
             "btn": false
         },

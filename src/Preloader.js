@@ -42,6 +42,7 @@ BasicGame.Preloader.prototype = {
         this.load.image('restart', 'resources/images/control-restart.png');
         this.load.image('pauseBoard', 'resources/images/pause_menu.png');
         this.load.image('findThePainting', 'resources/images/find_the_painting.png');
+        this.load.image('console', 'resources/images/console.png');
 
         this.load.spritesheet('play', 'resources/sprites/start_game.png', 300, 90);
         this.load.spritesheet('soundButton', 'resources/sprites/sound_toggle.png', 30, 30);
@@ -54,8 +55,10 @@ BasicGame.Preloader.prototype = {
         //  Load the Google WebFont Loader script
         // this.load.script('webfont', '//ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js');
         this.load.script('webfont', 'js/scripts/webfont.js');
-        // game.load.script('filter', 'https://cdn.rawgit.com/photonstorm/phaser/master/v2/filters/Fire.js');
-        this.load.script('filter', 'js/filters/Fire.js');
+        if (this.game.device.desktop) {
+            // game.load.script('filter', 'https://cdn.rawgit.com/photonstorm/phaser/master/v2/filters/Fire.js');
+            this.load.script('filter', 'js/filters/Fire.js');
+        }
 
         // Setup Background Images
         for (var ii = 0; ii < rpBackgrounds.length; ii++) {
