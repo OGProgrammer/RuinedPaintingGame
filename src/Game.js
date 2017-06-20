@@ -153,6 +153,10 @@ BasicGame.Game.prototype = {
             // Update buttons
             this.updateNavigationButtons();
 
+            //  Update Console Output
+            this.rpTitleText.text = rpGameMap[this.rpFutureState].title;
+            this.rpNarratorText.text = rpGameMap[this.rpFutureState].narrator;
+
             // Update Background Music
             if (this.rpMusic !== rpGameMap[this.rpFutureState].music) {
                 this.music.fadeOut(1000);

@@ -141,6 +141,8 @@ var rpGameMap = {
         "scene": "outside_seaside"
     },
     "outside_castle": {
+        "title": "Field",
+        "narrator": "There's the castle...",
         "forward": {
             "btn": true,
             "soundfx": "step_outside",
@@ -161,6 +163,8 @@ var rpGameMap = {
         "bg_src": "outside_castle"
     },
     "outside_castle_gate_out": {
+        "title": "Castle Wall",
+        "narrator": "Wow, there's no guards... too easy...",
         "forward": {
             "btn": true,
             "soundfx": "step_outside",
@@ -181,6 +185,8 @@ var rpGameMap = {
         "bg_src": "outside_castle_gate_out"
     },
     "outside_castle_gate": {
+        "title": "Castle Gate",
+        "narrator": "Ok, now I just gotta find the door...",
         "forward": {
             "btn": false
         },
@@ -203,6 +209,8 @@ var rpGameMap = {
         "bg_src": "outside_castle_gate"
     },
     "outside_courtyard": {
+        "title": "Courtyard",
+        "narrator": "...",
         "forward": {
             "btn": true,
             "soundfx": "step_outside",
@@ -227,6 +235,8 @@ var rpGameMap = {
         "bg_src": "outside_courtyard"
     },
     "outside_courtyard_side": {
+        "title": "Side Courtyard",
+        "narrator": "I feel like I'm getting close...",
         "forward": {
             "btn": true,
             "soundfx": "step_outside",
@@ -249,6 +259,8 @@ var rpGameMap = {
         "bg_src": "outside_courtyard_side"
     },
     "outside_castle_door": {
+        "title": "Castle Door",
+        "narrator": "There's the door and look, they even left it open for me... haha!",
         "forward": {
             "btn": true,
             "soundfx": "step_outside",
@@ -269,6 +281,8 @@ var rpGameMap = {
         "bg_src": "outside_castle_door"
     },
     "outside_courtyard_wall_deadend": {
+        "title": "Dead End",
+        "narrator": "Ah, this isn't the way... I've got to go back.",
         "forward": {
             "btn": false
         },
@@ -287,6 +301,8 @@ var rpGameMap = {
         "bg_src": "outside_courtyard_wall_deadend"
     },
     "outside_deadend_window": {
+        "title": "Dead End",
+        "narrator": "It's a dead end... I've got to find another way.",
         "forward": {
             "btn": false
         },
@@ -305,6 +321,8 @@ var rpGameMap = {
         "bg_src": "outside_deadend_window"
     },
     "outside_courtyard_wall": {
+        "title": "Wall Tunnel",
+        "narrator": "Hum... wonder where this tunnel goes.",
         "forward": {
             "btn": true,
             "soundfx": "step_outside",
@@ -325,6 +343,8 @@ var rpGameMap = {
         "bg_src": "outside_courtyard_wall"
     },
     "outside_courtyard_deadend": {
+        "title": "Dead End",
+        "narrator": "This isn't the way into the castle... I've got to retrace my steps.",
         "forward": {
             "btn": false
         },
@@ -343,6 +363,8 @@ var rpGameMap = {
         "bg_src": "outside_courtyard_deadend"
     },
     "inside_castle_entrance": {
+        "title": "Main Hall",
+        "narrator": "I can't believe no one is here. It's almost too quite...",
         "forward": {
             "btn": false
         },
