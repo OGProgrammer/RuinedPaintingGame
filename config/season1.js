@@ -115,6 +115,7 @@ var rpBackgrounds = [
 ];
 
 /**
+ * img_
  * This mapping is how the buttons are shown.
  * @type {{map_name: {up, right, down, left}}}
  */
