@@ -109,8 +109,8 @@ var rpBackgrounds = [
         "src": "resources/scenes/outside_courtyard_wall_deadend.jpg"
     },
     {
-        "name": "inside_castle_entrance",
-        "src": "resources/scenes/inside_castle_entrance.jpg"
+        "name": "inside_purple_bedroom",
+        "src": "resources/scenes/inside_purple_bedroom.jpg"
     }
 ];
 
@@ -367,10 +367,15 @@ var rpGameMap = {
         "title": "Main Hall",
         "narrator": "I can't believe no one is here. It's almost too quite...",
         "forward": {
-            "btn": false
+
+            "btn": true,
+            "soundfx": "step_outside",
+            "goto": "inside_purple_bedroom"
         },
         "right": {
-            "btn": false
+            "btn": true,
+            "soundfx": "step_outside",
+            "goto": "inside_purple_bedroom"
         },
         "back": {
             "btn": true,
@@ -382,5 +387,45 @@ var rpGameMap = {
         },
         "music": "outside_seaside",
         "bg_src": "outside_courtyard_deadend"
+    },
+    "inside_purple_bedroom": {
+        "title": "The Purple Bedroom",
+        "narrator": "Wow...that bed is so nice. I wish that I was a king...",
+        "forward": {
+            "btn": false
+        },
+        "right": {
+            "btn": false
+        },
+        "back": {
+            "btn": true,
+            "soundfx": "step_outside",
+            "goto": "inside_castle_entrance"
+        },
+        "left": {
+            "btn": false
+        },
+        "music": "outside_eerie",
+        "bg_src": "inside_purple_bedroom"
+    },
+    "inside_castle_church": {
+        "title": "The Chapel",
+        "narrator": "Wow...that bed is so nice. I wish that I was a king...",
+        "forward": {
+            "btn": false
+        },
+        "right": {
+            "btn": false
+        },
+        "back": {
+            "btn": true,
+            "soundfx": "step_outside",
+            "goto": "inside_castle_entrance"
+        },
+        "left": {
+            "btn": false
+        },
+        "music": "outside_eerie",
+        "bg_src": "inside_purple_bedroom"
     }
 };
